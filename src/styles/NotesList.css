@@ -1,0 +1,17 @@
+.notes_list {
+    border-top: 2px solid var(--color4);
+    padding: .5rem;
+    color: var(--color3);
+}
+
+.note_in_list {
+    list-style: none;
+    margin: 0 1rem;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--color5);
+}
+
+.note_in_list_title {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
