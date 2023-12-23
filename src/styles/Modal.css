@@ -1,0 +1,43 @@
+.modal_screen{
+    z-index: 3;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal_div {
+    background-color: var(--color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.modal_btn {
+    padding: 1rem;
+    margin: .5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 90px;
+}
+
+.btn_edit {
+    background-color: var(--color3);
+}
+
+.btn_delete {
+    background-color:var(--color5);
+}
+
+.btn_cancel {
+    background-color: var(--color4);
+}
