@@ -12,13 +12,22 @@
 }
 
 .modal_div {
+
+    max-width: 350px;
+    padding: 1rem;
+    border-radius: 10px;
     background-color: var(--color2);
+}
+
+.modal_title {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.modal_btn_div {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 500px;
-    padding: 1rem;
-    border-radius: 10px;
 }
 
 .modal_btn {
