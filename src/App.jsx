@@ -6,10 +6,10 @@ import "./styles/App.css";
 import { Routes, Route } from "react-router-dom";
 
 const notesExample = [
-    { title: "titulo de nota", body: "texto de la nota" },
-    { title: "titulo de nota", body: "texto de la nota" },
-    { title: "titulo de nota", body: "texto de la nota" },
-    { title: "titulo de nota", body: "texto de la nota" },
+    { id: 1, title: "titulo de nota", body: "texto de la nota" },
+    { id: 2, title: "titulo de nota", body: "texto de la nota" },
+    { id: 3, title: "titulo de nota", body: "texto de la nota" },
+    { id: 4, title: "titulo de nota", body: "texto de la nota" },
 ];
 
 function App() {

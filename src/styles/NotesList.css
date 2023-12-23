@@ -1,14 +1,14 @@
 .notes_list {
-    border-top: 2px solid var(--color4);
     padding: .5rem;
-    color: var(--color3);
+    color: var(--color4);
 }
 
 .note_in_list {
     list-style: none;
-    margin: 0 1rem;
-    padding: 1rem 0;
-    border-bottom: 2px solid var(--color5);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--color2);
 }
 
 .note_in_list_title {
