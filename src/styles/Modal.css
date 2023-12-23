@@ -28,10 +28,14 @@
     border-radius: 5px;
     font-weight: bold;
     width: 90px;
+    color: var(--color1);
+    font-size: .8rem;
+    text-align: center;
 }
 
 .btn_edit {
     background-color: var(--color3);
+    text-decoration: none;
 }
 
 .btn_delete {

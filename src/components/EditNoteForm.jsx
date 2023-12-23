@@ -1,15 +1,21 @@
 import "../styles/NewNoteForm.css";
 import { Link } from "react-router-dom";
 import back_icon from "../assets/icons/back-svgrepo-com.svg";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { NotesContext } from "../contexts/NotesContext";
 
-const EditNoteForm = () => {
+const EditNoteForm = ({noteToEdit}) => {
 
     const {notes, setNotes} = useContext(NotesContext);
 
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
+
+    useEffect(() => {
+        console.log(noteToEdit)
+        // setTitle(noteToEdit.title)
+        // setBody(noteToEdit.body)
+    }, [noteToEdit])
 
     const saveNote = (e) => {
         e.preventDefault()

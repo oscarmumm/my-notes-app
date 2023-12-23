@@ -4,6 +4,7 @@ import { NotesContext } from "./contexts/NotesContext";
 import { useState } from "react";
 import "./styles/App.css";
 import { Routes, Route } from "react-router-dom";
+import EditNoteForm from "./components/EditNoteForm";
 
 const notesExample = [
     { id: 1, title: "titulo de nota 1", body: "texto de la nota 1" },
@@ -21,7 +22,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="new-note" element={<NewNote />} />
-                    
+                    <Route path="edit-note" element={<EditNoteForm />} />
                 </Routes>
             </div>
         </NotesContext.Provider>

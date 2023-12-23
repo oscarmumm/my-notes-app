@@ -10,12 +10,7 @@ const NotesList = () => {
 
     const actionOnNote = (el) => {
       setShowModal(true)
-      console.log(el)
       setNoteToAction(el)
-    }
-
-    const edit = () => {
-
     }
 
     const remove = () => {
@@ -40,7 +35,7 @@ const NotesList = () => {
                 </li>
             ))}
             {showModal ? (
-                <Modal edit={edit} remove={remove} cancel={cancel} />
+                <Modal remove={remove} cancel={cancel} noteToEdit={noteToAction} />
             ) : null}
         </ul>
     );

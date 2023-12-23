@@ -1,10 +1,7 @@
+import { Link } from "react-router-dom";
 import "../styles/Modal.css";
 
-const Modal = ({edit, remove, cancel}) => {
-
-    const editNote = () => {
-        edit()
-    }
+const Modal = ({remove, cancel, noteToEdit}) => {
 
     const removeNote = () => {
         remove()
@@ -17,9 +14,9 @@ const Modal = ({edit, remove, cancel}) => {
     return (
         <div className="modal_screen">
             <div className="modal_div">
-                <button className="modal_btn btn_edit" onClick={editNote}>
+                <Link to="edit-note" state={{noteToEdit}} className="modal_btn btn_edit">
                     Editar
-                </button>
+                </Link>
                 <button className="modal_btn btn_delete" onClick={removeNote}>
                     Eliminar
                 </button>
