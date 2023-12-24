@@ -25,7 +25,7 @@ const Modal = ({ remove, cancel, noteToEdit }) => {
                 <div className="modal_btn_div">
                     <Link
                         to="edit-note"
-                        state={{ noteToEdit }}
+                        state={{noteToEdit}}
                         className="modal_btn btn_edit"
                     >
                         Editar

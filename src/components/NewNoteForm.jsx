@@ -38,16 +38,16 @@ const NewNoteForm = () => {
                     onChange={(e) => setTitle(e.target.value)}
                     value={title}
                     type="text"
-                    placeholder="Title"
+                    placeholder="Título..."
                     />
                 <textarea
                     className="note_template_form_textarea"
                     onChange={(e) => setBody(e.target.value)}
                     value={body}
                     name=""
-                    placeholder="Your note"
+                    placeholder="Escribe tu nota..."
                 ></textarea>
-                <button className="save_button" onClick={(e) => saveNote(e)}>Save</button>
+                <button className="save_button" onClick={(e) => saveNote(e)}>Guardar</button>
             </form>
         </div>
     );

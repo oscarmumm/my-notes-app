@@ -6,6 +6,7 @@ import "./styles/App.css";
 import { Routes, Route } from "react-router-dom";
 import EditNoteForm from "./components/EditNoteForm";
 
+
 const notesExample = [
     { id: 1, title: "titulo de nota 1", body: "texto de la nota 1" },
     { id: 2, title: "titulo de nota 2", body: "texto de la nota 2" },

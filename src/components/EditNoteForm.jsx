@@ -1,34 +1,37 @@
 import "../styles/NewNoteForm.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import back_icon from "../assets/icons/back-svgrepo-com.svg";
 import { useState, useContext, useEffect } from "react";
 import { NotesContext } from "../contexts/NotesContext";
 
-const EditNoteForm = ({noteToEdit}) => {
+const EditNoteForm = () => {
 
     const {notes, setNotes} = useContext(NotesContext);
+    const {noteToEdit} = useLocation().state;
 
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
+    const [id, setId] = useState('')
 
-    useEffect(() => {
+    useEffect(()=> {
         console.log(noteToEdit)
-        // setTitle(noteToEdit.title)
-        // setBody(noteToEdit.body)
-    }, [noteToEdit])
+        setTitle(noteToEdit.title)
+        setBody(noteToEdit.body)
+        setId(noteToEdit.id)
+    }, [])
 
-    const saveNote = (e) => {
+    const saveEditNote = (e) => {
         e.preventDefault()
-        setNotes([
-            ...notes, {
-                id: Date.now().toString(),
-                title: title,
-                body: body
+        let tempNotesArr = notes
+        tempNotesArr.map((el) => {
+            if(el.id === id) {
+                el.title = title;
+                el.body = body
             }
-        ])
+        })
+        setNotes(tempNotesArr)
         setTitle('')
         setBody('')
-        console.log(notes)
     }
 
     return (
@@ -44,16 +47,16 @@ const EditNoteForm = ({noteToEdit}) => {
                     onChange={(e) => setTitle(e.target.value)}
                     value={title}
                     type="text"
-                    placeholder="Title"
+                    placeholder="Título..."
                     />
                 <textarea
                     className="note_template_form_textarea"
                     onChange={(e) => setBody(e.target.value)}
                     value={body}
                     name=""
-                    placeholder="your note"
+                    placeholder="Escribe tu nota.."
                 ></textarea>
-                <button className="save_button" onClick={(e) => saveNote(e)}>Save</button>
+                <button className="save_button" onClick={(e) => saveEditNote(e)}>Guardar</button>
             </form>
         </div>
     );
