@@ -14,7 +14,6 @@ const EditNoteForm = () => {
     const [id, setId] = useState('')
 
     useEffect(()=> {
-        console.log(noteToEdit)
         setTitle(noteToEdit.title)
         setBody(noteToEdit.body)
         setId(noteToEdit.id)

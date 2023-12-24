@@ -22,7 +22,6 @@ const NewNoteForm = () => {
         ])
         setTitle('')
         setBody('')
-        console.log(notes)
     }
 
     return (
