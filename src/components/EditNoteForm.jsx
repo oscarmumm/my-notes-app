@@ -1,11 +1,12 @@
 import "../styles/NewNoteForm.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import back_icon from "../assets/icons/back-svgrepo-com.svg";
 import { useState, useContext, useEffect } from "react";
 import { NotesContext } from "../contexts/NotesContext";
 
 const EditNoteForm = () => {
 
+    const navigate = useNavigate()
     const {notes, setNotes} = useContext(NotesContext);
     const {noteToEdit} = useLocation().state;
 
@@ -31,6 +32,7 @@ const EditNoteForm = () => {
         setNotes(tempNotesArr)
         setTitle('')
         setBody('')
+        navigate("/")
     }
 
     return (

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import back_icon from "../assets/icons/back-svgrepo-com.svg";
 import { useState, useContext } from "react";
 import { NotesContext } from "../contexts/NotesContext";
+import { useNavigate } from "react-router-dom";
 
 const NewNoteForm = () => {
 
@@ -10,6 +11,8 @@ const NewNoteForm = () => {
 
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
+
+    const navigate = useNavigate()
 
     const saveNote = (e) => {
         e.preventDefault()
@@ -22,6 +25,7 @@ const NewNoteForm = () => {
         ])
         setTitle('')
         setBody('')
+        navigate("/")
     }
 
     return (
@@ -46,7 +50,7 @@ const NewNoteForm = () => {
                     name=""
                     placeholder="Escribe tu nota..."
                 ></textarea>
-                <button className="save_button" onClick={(e) => saveNote(e)}>Guardar</button>
+                <button to="/" className="save_button" onClick={(e) => saveNote(e)}>Guardar</button>
             </form>
         </div>
     );
