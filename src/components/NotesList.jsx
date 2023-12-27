@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { NotesContext } from "../contexts/NotesContext";
 import Modal from "./Modal";
 import "../styles/NotesList.css";
@@ -21,6 +21,10 @@ const NotesList = () => {
     const cancel = () => {
         setShowModal(false);
     };
+
+    useEffect(() => {
+        localStorage.setItem('saved-notes', JSON.stringify(notes))
+    }, [notes])
 
     return (
         <ul className="notes_list">
