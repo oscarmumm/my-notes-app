@@ -1,41 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
-    /* collor palletes */
-
-
+    /* collor pallete */
     --color1: #130F1E;
     --color2: #1F2531;
     --color3: #17D4B6;
     --color4: #D8DBEA;
     --color5: #ff5f00;
-
-    /* --color1: #293241;
-    --color2: #3d5a80;
-    --color3: #98c1d9;
-    --color4: #e0fbfc;
-    --color5: #ee6c4d; */
-
-    /* --color1: #0b0c10;
-    --color2: #1f2833;
-    --color3: #c5c6c7;
-    --color4: #66fcf1;
-    --color5: #45a29e; */
-
-    /*
-    --color1: #1ce8a4;
-    --color2: #46f5ca;
-    --color3: #19a49c;
-    --color4: #4c548c;
-    --color5: #a4a4d4;
-    --color6: #30445a;
-    */
-
-    /* --color1: #303c6c;
-    --color2: #f4976c;
-    --color3: #b4dfe5;
-    --color4: #d2fdff;
-    --color5: #fbe8a6; */
 }
 
 * {

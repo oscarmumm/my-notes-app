@@ -15,6 +15,7 @@
     padding: 1rem;
     border-radius: 15px;
     background-color: var(--color2);
+    cursor: pointer;
 }
 
 .note_in_list:hover {
@@ -24,4 +25,24 @@
 .note_in_list_title {
     font-weight: bold;
     margin-bottom: .5rem;
+}
+
+
+@media (min-width: 576px) {
+    .notes_list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }    
+}
+
+@media (min-width: 768px) {
+    .notes_list {
+        grid-template-columns: repeat(3, 1fr);
+    }    
+}
+
+@media (min-width: 992px) {
+    .notes_list {
+        grid-template-columns: repeat(4, 1fr);
+    }    
 }
