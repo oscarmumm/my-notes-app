@@ -3,6 +3,16 @@ import { NotesContext } from "../contexts/NotesContext";
 import Modal from "./Modal";
 import "../styles/NotesList.css";
 
+//VER COMO COMPATIBILIZAR EL USECONTEXT CON EL LOCAL STORAGE
+// const getLocalData = () => {
+//     let notes = localStorage.getItem('saved-notes');
+//     if (notes) {
+//         return JSON.parse(localStorage.getItem('saved-notes'))
+//     } else {
+//         return [];
+//     }
+// }
+
 const NotesList = () => {
     const { notes, setNotes } = useContext(NotesContext);
     const [showModal, setShowModal] = useState(false);
