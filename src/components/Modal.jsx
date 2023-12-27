@@ -26,18 +26,18 @@ const Modal = ({ remove, cancel, noteToEdit }) => {
                     <Link
                         to="edit-note"
                         state={{noteToEdit}}
-                        className="modal_btn btn_edit"
+                        className="modal_btn btn_cyan"
                     >
                         Editar
                     </Link>
                     <button
-                        className="modal_btn btn_delete"
+                        className="modal_btn btn_orange"
                         onClick={removeNote}
                     >
                         Eliminar
                     </button>
                     <button
-                        className="modal_btn btn_cancel"
+                        className="modal_btn btn_grey"
                         onClick={cancelAction}
                     >
                         Cancelar

@@ -1,4 +1,4 @@
-import "../styles/WarningModal.css";
+import "../styles/Modal.css";
 
 const WarningModal = ({remove, hideWarningModal}) => {
 
@@ -15,10 +15,10 @@ const WarningModal = ({remove, hideWarningModal}) => {
             <div className="modal_div">
                 <h2 className="modal_title">¿Está seguro de borrar la nota?</h2>
                 <div className="modal_btn_div">
-                    <button className="modal_btn btn_delete" onClick={removeNote}>
+                    <button className="modal_btn btn_orange" onClick={removeNote}>
                         Si, eliminar
                     </button>
-                    <button className="modal_btn btn_cancel" onClick={cancelAction}>
+                    <button className="modal_btn btn_grey" onClick={cancelAction}>
                         No, regresar
                     </button>
                 </div>

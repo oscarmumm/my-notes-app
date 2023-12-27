@@ -22,6 +22,7 @@
 .modal_title {
     text-align: center;
     padding: 1rem 0;
+    color: var(--color4);
 }
 
 .modal_btn_div {
@@ -42,15 +43,15 @@
     text-align: center;
 }
 
-.btn_edit {
+.btn_cyan {
     background-color: var(--color3);
     text-decoration: none;
 }
 
-.btn_delete {
+.btn_orange {
     background-color:var(--color5);
 }
 
-.btn_cancel {
+.btn_grey {
     background-color: var(--color4);
 }

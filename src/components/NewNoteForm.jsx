@@ -4,29 +4,39 @@ import back_icon from "../assets/icons/back-svgrepo-com.svg";
 import { useState, useContext } from "react";
 import { NotesContext } from "../contexts/NotesContext";
 import { useNavigate } from "react-router-dom";
+import EmptyTitleModal from "./EmptyTitleModal";
 
 const NewNoteForm = () => {
+    const { notes, setNotes } = useContext(NotesContext);
+    const [showEmptyTitleModal, setShowEmptyTitleModal] = useState(false);
 
-    const {notes, setNotes} = useContext(NotesContext);
+    const [title, setTitle] = useState("");
+    const [body, setBody] = useState("");
 
-    const [title, setTitle] = useState('')
-    const [body, setBody] = useState('')
-
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const saveNote = (e) => {
-        e.preventDefault()
-        setNotes([
-            ...notes, {
-                id: Date.now().toString(),
-                title: title,
-                body: body
-            }
-        ])
-        setTitle('')
-        setBody('')
-        navigate("/")
-    }
+        e.preventDefault();
+        if (title.trim() === '') {
+            setShowEmptyTitleModal(true);
+        } else {
+            setNotes([
+                ...notes,
+                {
+                    id: Date.now().toString(),
+                    title: title,
+                    body: body,
+                },
+            ]);
+            setTitle("");
+            setBody("");
+            navigate("/");
+        }
+    };
+
+    const closeModal = () => {
+        setShowEmptyTitleModal(false);
+    };
 
     return (
         <div className="note_template_container">
@@ -42,7 +52,7 @@ const NewNoteForm = () => {
                     value={title}
                     type="text"
                     placeholder="Título..."
-                    />
+                />
                 <textarea
                     className="note_template_form_textarea"
                     onChange={(e) => setBody(e.target.value)}
@@ -50,8 +60,17 @@ const NewNoteForm = () => {
                     name=""
                     placeholder="Escribe tu nota..."
                 ></textarea>
-                <button to="/" className="save_button" onClick={(e) => saveNote(e)}>Guardar</button>
+                <button
+                    to="/"
+                    className="save_button"
+                    onClick={(e) => saveNote(e)}
+                >
+                    Guardar
+                </button>
             </form>
+            {showEmptyTitleModal ? (
+                <EmptyTitleModal closeModal={closeModal} />
+            ) : null}
         </div>
     );
 };
